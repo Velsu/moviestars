@@ -3,6 +3,8 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag @movie.image.url(:medium) %>
+        <div class="star-rating" data-score= <%= @avg_score %> ></div>
+        <em>Score based on <%= pluralize( @reviews.length, "review") %></em>
         <div class="table-responsive">
           <table class="table">
             <tbody>
